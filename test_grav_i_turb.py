@@ -111,7 +111,7 @@ def efficiency(j, k):
 
 def prob_real_droplets_g(j, k):  # graw
     K_grav=np.pi*(r[j]+r[k])**2*np.absolute(u2(r[j])-u2(r[k])) 
-    return  efficiency(j, k) * (K**2+K_grav**2)**0.5 * dt/V 
+    return  efficiency(j, k)*(K(j,k)**2+K_grav**2)**0.5*dt/V 
 
 
 def prob_real_droplets_t(j, k):  # turb
